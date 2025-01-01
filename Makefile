@@ -19,6 +19,8 @@ $(EXECUTABLE): $(OBJECTS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 run: $(EXECUTABLE)
+	@ mkdir -p tmp/ics_files && \
+	ICS_OUTPUT_DIR="tmp/ics_files" \
 	./$(EXECUTABLE)
 
 clean:
