@@ -25,3 +25,6 @@ run: $(EXECUTABLE)
 
 clean:
 	rm -f $(OBJECTS) $(EXECUTABLE)
+
+format:
+	clang-format -i $(SOURCES)

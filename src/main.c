@@ -5,19 +5,20 @@
 #include <string.h>
 
 typedef struct {
-	char dtstart[32];
-	char dtend[32];
+  char dtstart[32];
+  char dtend[32];
   char summary[100];
   char description[200];
 } Event;
 
-Event createEvent(const char *dtstart, const char *dtend, const char *summary, const char *description) {
+Event createEvent(const char *dtstart, const char *dtend, const char *summary,
+                  const char *description) {
   Event newEvent;
   strncpy(newEvent.dtstart, dtstart, sizeof(newEvent.dtstart));
   strncpy(newEvent.dtend, dtend, sizeof(newEvent.dtend));
   strncpy(newEvent.summary, summary, sizeof(newEvent.summary));
   strncpy(newEvent.description, description, sizeof(newEvent.description));
-	return newEvent;
+  return newEvent;
 }
 
 int createICSFile(Event event) {
@@ -46,7 +47,7 @@ int createICSFile(Event event) {
   fprintf(file, "SUMMARY:%s\n", event.summary);
   fprintf(file, "DESCRIPTION:%s\n", event.description);
   fprintf(file, "END:VEVENT\n");
-	fprintf(file, "END:VCALENDAR\n");
+  fprintf(file, "END:VCALENDAR\n");
 
   fclose(file);
   printf("[INFO] ICS file created successfully at '%s'.\n", filepath);
@@ -56,7 +57,8 @@ int createICSFile(Event event) {
 int writeICSFile() { return 0; }
 
 int main() {
-  Event dummyEvent = createEvent("20250103T090000Z", "20250103T093000Z", "Breakfast", "Let's have breakfast.");
+  Event dummyEvent = createEvent("20250103T090000Z", "20250103T093000Z",
+                                 "Breakfast", "Let's have breakfast.");
   if (createICSFile(dummyEvent) != 0) {
     return 1;
   }
