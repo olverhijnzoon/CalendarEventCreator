@@ -11,6 +11,15 @@ typedef struct {
   char description[200];
 } Event;
 
+Event createEvent(const char *dtstart, const char *dtend, const char *summary, const char *description) {
+  Event newEvent;
+  strncpy(newEvent.dtstart, dtstart, sizeof(newEvent.dtstart));
+  strncpy(newEvent.dtend, dtend, sizeof(newEvent.dtend));
+  strncpy(newEvent.summary, summary, sizeof(newEvent.summary));
+  strncpy(newEvent.description, description, sizeof(newEvent.description));
+	return newEvent;
+}
+
 int createICSFile(Event event) {
   char *outputDir = getenv("ICS_OUTPUT_DIR");
   if (outputDir == NULL) {
@@ -47,11 +56,7 @@ int createICSFile(Event event) {
 int writeICSFile() { return 0; }
 
 int main() {
-  Event dummyEvent;
-  strcpy(dummyEvent.dtstart, "20250101T220000Z");
-  strcpy(dummyEvent.dtend, "20250101T230000Z");
-  strcpy(dummyEvent.summary, "dummyEvent summary");
-  strcpy(dummyEvent.description, "dummyEvent Description");
+  Event dummyEvent = createEvent("20250103T090000Z", "20250103T093000Z", "Breakfast", "Let's have breakfast.");
   if (createICSFile(dummyEvent) != 0) {
     return 1;
   }
