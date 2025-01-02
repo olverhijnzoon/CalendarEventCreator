@@ -22,4 +22,3 @@ jobs:
           DEFAULT_BRANCH: "main"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_CPPLINT: true
-          CPPLINT_FILTER: -whitespace/comments
