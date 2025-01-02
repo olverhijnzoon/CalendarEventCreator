@@ -5,6 +5,8 @@
 #include <string.h>
 
 typedef struct {
+	char dtstart[32];
+	char dtend[32];
   char summary[100];
   char description[200];
 } Event;
@@ -28,8 +30,13 @@ int createICSFile(Event event) {
   }
 
   fprintf(file, "BEGIN:VCALENDAR\n");
+  fprintf(file, "VERSION:2.0\n");
+  fprintf(file, "BEGIN:VEVENT\n");
+  fprintf(file, "DTSTART:%s\n", event.dtstart);
+  fprintf(file, "DTEND:%s\n", event.dtend);
   fprintf(file, "SUMMARY:%s\n", event.summary);
-	fprintf(file, "DESCRIPTION:%s\n", event.description);
+  fprintf(file, "DESCRIPTION:%s\n", event.description);
+  fprintf(file, "END:VEVENT\n");
 	fprintf(file, "END:VCALENDAR\n");
 
   fclose(file);
@@ -41,8 +48,10 @@ int writeICSFile() { return 0; }
 
 int main() {
   Event dummyEvent;
-	strcpy(dummyEvent.summary, "dummyEvent summary");
-	strcpy(dummyEvent.description, "dummyEvent Description");
+  strcpy(dummyEvent.dtstart, "20250101T220000Z");
+  strcpy(dummyEvent.dtend, "20250101T230000Z");
+  strcpy(dummyEvent.summary, "dummyEvent summary");
+  strcpy(dummyEvent.description, "dummyEvent Description");
   if (createICSFile(dummyEvent) != 0) {
     return 1;
   }
