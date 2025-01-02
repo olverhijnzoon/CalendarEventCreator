@@ -14,12 +14,10 @@ int createICSFile() {
   return 0;
 }
 
-int writeICSFile() {
-  return 0;
-}
+int writeICSFile() { return 0; }
 
 int main() {
-  if (createICSFile() != 0){
+  if (createICSFile() != 0) {
     return 1;
   }
   writeICSFile();
