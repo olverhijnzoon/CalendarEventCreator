@@ -19,4 +19,4 @@ int createICSFile(Event event);
 
 int writeICSFile();
 
-#endif  // INCLUDE_ICS_ICS_H_
+#endif // INCLUDE_ICS_ICS_H_
