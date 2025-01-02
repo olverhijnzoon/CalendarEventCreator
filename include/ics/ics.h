@@ -1,7 +1,7 @@
 // Copyright 2025 Oliver Heinsohn
 
-#ifndef INCLUDE_ICS_H
-#define INCLUDE_ICS_H
+#ifndef INCLUDE_ICS_ICS_H
+#define INCLUDE_ICS_ICS_H
 
 #include <stdio.h>
 
