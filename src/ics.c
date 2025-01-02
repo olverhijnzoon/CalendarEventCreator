@@ -1,6 +1,6 @@
 // Copyright 2025 Oliver Heinsohn
 
-#include "ics.h"
+#include "ics/ics.h"
 #include <stdlib.h>
 #include <string.h>
 

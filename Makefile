@@ -8,7 +8,7 @@ LDFLAGS =
 SOURCES = $(wildcard src/*.c)
 OBJECTS = $(SOURCES:.c=.o)
 EXECUTABLE = calendar_event_creator
-HEADER = $(wildcard include/*.h)
+HEADER = $(wildcard include/**/*.h)
 
 all: $(EXECUTABLE)
 
