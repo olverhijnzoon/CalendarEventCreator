@@ -22,3 +22,4 @@ jobs:
           DEFAULT_BRANCH: "main"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_CPPLINT: true
+          CPPLINT_FILTERS_FILE: .cpplint
