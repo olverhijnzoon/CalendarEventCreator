@@ -8,6 +8,7 @@ LDFLAGS =
 SOURCES = $(wildcard src/*.c)
 OBJECTS = $(SOURCES:.c=.o)
 EXECUTABLE = calendar_event_creator
+HEADER = $(wildcard include/**/*.h)
 
 all: $(EXECUTABLE)
 
@@ -27,4 +28,4 @@ clean:
 	rm -f $(OBJECTS) $(EXECUTABLE)
 
 format:
-	clang-format -i $(SOURCES)
+	clang-format -i $(SOURCES) $(HEADER)
