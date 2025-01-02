@@ -56,4 +56,5 @@ dkms.conf
 *.swp
 
 # tmp
+tmp/**
 calendar_event_creator
