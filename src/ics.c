@@ -1,3 +1,5 @@
+// Copyright 2025 Oliver Heinsohn
+
 #include "ics.h"
 #include <stdlib.h>
 #include <string.h>
@@ -44,6 +46,5 @@ int createICSFile(Event event) {
   printf("[INFO] ICS file created successfully at '%s'.\n", filepath);
   return 0;
 }
-
 
 int writeICSFile() { return 0; }

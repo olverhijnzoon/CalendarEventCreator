@@ -1,3 +1,5 @@
+// Copyright 2025 Oliver Heinsohn
+
 #ifndef ICS_H
 #define ICS_H
 

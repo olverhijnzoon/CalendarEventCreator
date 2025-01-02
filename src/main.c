@@ -1,7 +1,6 @@
 // Copyright 2025 Oliver Heinsohn
 
 #include "ics.h"
-#include <stdio.h>
 
 int main() {
   Event dummyEvent = createEvent("20250103T090000Z", "20250103T093000Z",
