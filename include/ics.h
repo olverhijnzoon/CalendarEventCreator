@@ -12,8 +12,8 @@ typedef struct {
   char description[200];
 } Event;
 
-
-Event createEvent(const char *dtstart, const char *dtend, const char *summary, const char *description);
+Event createEvent(const char *dtstart, const char *dtend, const char *summary,
+                  const char *description);
 
 int createICSFile(Event event);
 
