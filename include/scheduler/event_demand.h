@@ -1,5 +1,7 @@
-#ifndef EVENT_DEMAND_H
-#define EVENT_DEMAND_H
+// Copyright 2025 Oliver Heinsohn
+
+#ifndef INCLUDE_SCHEDULER_EVENT_DEMAND_H_
+#define INCLUDE_SCHEDULER_EVENT_DEMAND_H_
 
 typedef struct {
   char start[16];
@@ -13,4 +15,4 @@ typedef struct {
   TimeSlot timeSlot;
 } EventDemand;
 
-#endif // EVENT_DEMAND_H
+#endif // INCLUDE_SCHEDULER_EVENT_DEMAND_H_
