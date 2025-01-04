@@ -32,15 +32,18 @@ int createICSFile(Event event) {
     return 1;
   }
 
-  fprintf(file, "BEGIN:VCALENDAR\n");
-  fprintf(file, "VERSION:2.0\n");
-  fprintf(file, "BEGIN:VEVENT\n");
-  fprintf(file, "DTSTART:%s\n", event.dtstart);
-  fprintf(file, "DTEND:%s\n", event.dtend);
-  fprintf(file, "SUMMARY:%s\n", event.summary);
-  fprintf(file, "DESCRIPTION:%s\n", event.description);
-  fprintf(file, "END:VEVENT\n");
-  fprintf(file, "END:VCALENDAR\n");
+
+  fprintf(file,
+          "BEGIN:VCALENDAR\n"
+          "VERSION:2.0\n"
+          "BEGIN:VEVENT\n"
+          "DTSTART:%s\n"
+          "DTEND:%s\n"
+          "SUMMARY:%s\n"
+          "DESCRIPTION:%s\n"
+          "END:VEVENT\n"
+          "END:VCALENDAR\n",
+          event.dtstart, event.dtend, event.summary, event.description);
 
   fclose(file);
   printf("[INFO] ICS file created successfully at '%s'.\n", filepath);
