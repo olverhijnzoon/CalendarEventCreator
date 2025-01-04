@@ -32,7 +32,6 @@ int createICSFile(Event event) {
     return 1;
   }
 
-
   fprintf(file,
           "BEGIN:VCALENDAR\n"
           "VERSION:2.0\n"
