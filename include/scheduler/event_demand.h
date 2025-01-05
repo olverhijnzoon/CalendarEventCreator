@@ -4,13 +4,13 @@
 #define INCLUDE_SCHEDULER_EVENT_DEMAND_H_
 
 typedef struct {
-  char start[16];
-  char end[16];
+  const char *start;
+  const char *end;
 } TimeSlot;
 
 typedef struct {
-  char summary[256];
-  char description[1024];
+  const char *summary;
+  const char *description;
   int durationMinutes;
   TimeSlot timeSlot;
 } EventDemand;
