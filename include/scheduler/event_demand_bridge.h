@@ -1,5 +1,7 @@
-#ifndef EVENT_DEMAND_BRIDGE_H
-#define EVENT_DEMAND_BRIDGE_H
+// Copyright 2025 Oliver Heinsohn
+
+#ifndef INCLUDE_SCHEDULER_EVENT_DEMAND_BRIDGE_H__H
+#define INCLUDE_SCHEDULER_EVENT_DEMAND_BRIDGE_H__H
 
 #include "event_demand.h"
 
@@ -8,4 +10,4 @@ extern EventDemand createEventDemand(const char *summary,
                                      int durationMinutes, const char *start,
                                      const char *end);
 
-#endif
+#endif // INCLUDE_SCHEDULER_EVENT_DEMAND_BRIDGE_H_
