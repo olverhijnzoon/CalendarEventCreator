@@ -3,7 +3,7 @@
 #ifndef INCLUDE_SCHEDULER_EVENT_DEMAND_BRIDGE_H_
 #define INCLUDE_SCHEDULER_EVENT_DEMAND_BRIDGE_H_
 
-#include "event_demand.h"
+#include "scheduler/event_demand.h"
 
 extern EventDemand createEventDemand(const char *summary,
                                      const char *description,
